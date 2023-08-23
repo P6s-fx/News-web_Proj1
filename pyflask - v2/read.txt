@@ -1,0 +1,3 @@
+This project is based on Pyhton web using Flask.
+In this project i used python as a scripting and SQL For database.
+i have used HTML,css and Bootstrap For Front-end.
