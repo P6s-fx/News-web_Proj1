@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{url_for('static', filename='img/1.jpg') }}') ">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>WELCOME TO YOUR DASHBOARD</h1>
+                    <span class="subheading">YOU CAN FIND YOUR UPLOADS.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <table class="table">
+<!-- 
+                <h1>Upload artical Here</h1>
+                <form action="/uploader" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" class="form-control" id="customFile">
+                    <button name="submit_file" class="btn btn-primary">Submit file</button>
+                </form>
+                
+                <br> -->
+                <a href="/edit/0"> <button class="btn btn-primary">Upload Article</button> </a>
+                <!-- <a href="/logout"> <button class="btn btn-primary">LOGOUT</button> </a> -->
+
+
+                <hr>
+                <h1>Articals</h1>
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">Sr</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">date</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in posts %}
+
+                        <tr>
+                            <!-- <th scope="row">1</th> -->
+                            <td>{{post.sno}}</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.date}}</td>
+                            <td> <a href="/edit/{{post.sno}}"> <button class="btn btn-primary">Edit</button> </a></td>
+                            <td> <a href="/delete/{{post.sno}}"> <button class="btn btn-primary">Delete</button> </a></td>
+                            
+
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+
+
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Pager-->
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older
+                        Posts
+                        →</a></div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
