@@ -1,0 +1,23 @@
+{
+    "params" :
+    {
+        "local_server" : "True",
+        "local_uri" : "mysql://root:@localhost/contact",
+        "prod_uri" : "mysql://root:@localhost/contact",
+        "fb_url" : "https://www.facebook.com/profile.php?id=100095717610564",
+        "tw_url" : "https://twitter.com/theunscrolled",
+        "gh_url" : "https://github.com/paramsuthar",
+        "blog_name" : "The Unscrolled",
+        "blog_line" : "Tech Updates",
+        "admin_uploader" : "Param Suthar",
+        "tag_line" : "Unscrolling tech news for you",
+        "gmail-user" : "dotclock24@gmail.com",
+        "gmail-password" : "P6s@610_fx",
+        "no_of_pages" : 5,
+        "log_img" : "login.png",
+        "about_text": "Hello Techy's, \n This is The Unscrolled. \n we are trying hard to make you updated with new technology news.",
+        "admin_user" : "param",
+        "admin_pass" : "param123",
+        "upload_loc" : "D:\\codes\\PYTHON\\FLASK\\Learn\\Static"
+    }
+}
